@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>
+		<title>02_音悦tai</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script>
+			//适配方案
+			(function(){
+				var width = document.documentElement.clientWidth;
+				var html = document.querySelector("html");
+				html.style.fontSize=width/16+"px";
+			})();
+		</script>
+	</head>
+	<body>
+		<!--应用的包裹区域-->
+		<section class="wrap">
+			<!--头部区域-->
+			<header id="header">
+				<!--上半部分(logo 系统菜单 按钮排)-->
+				<div id="headerT">
+					<!--logo-->
+					<h1 class="logo">
+						<a href="javascript:void(0)">
+							<img src="img/logo.png"/>
+						</a>
+					</h1>
+					
+					<!--系统菜单-->
+					<a href="javascript:void(0)" id="menuBtn" class="menuBtnClos"></a>
+					
+					<!--按钮排-->
+					<div id="nav">
+						<a href="javascript:void(0)" class="searchBtn">搜索</a>
+						<a href="javascript:void(0)">登录</a>
+						<a href="javascript:void(0)">注册</a>
+					</div>
+				</div>
+				
+				<!--下半部分(搜索区域)-->
+				<form id="search">
+					<input type="text"  placeholder="请输入搜索内容" />
+					<input type="submit" value="搜索"/>
+				</form>
+				
+				<!--定位层-->
+				<ul id="list">
+					<li>
+						<a href="javascript:void(0)">首页</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">MV</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">悦单</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">V榜</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">音悦</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">商城</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">节目</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">饭团</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">资讯</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">我的家</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">APP下载</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">热门应用</a>
+					</li>
+				</ul>
+			</header>
+			
+			<!--内容区域-->
+			<section id="content">
+				<!--可拖拽的导航-->
+				<nav id="navScroll">
+					<ul id="navs">
+						<li class="active">
+							<a href="javascript:void(0)">首页</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">MV</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">悦单</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">V榜</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">音悦</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">商城</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">节目</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">饭团</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">资讯</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">我的家</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">APP下载</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">热门应用</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">佟刚</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">张晓飞</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">宋宏康</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">xxx</a>
+						</li>
+					</ul>
+				</nav>
+				
+				<!--无缝滑屏-->
+				<div id="picWrap">
+					<ul id="picList">
+						<li>
+							<a href="javascript:void(0)">
+								<img src="img/1.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="img/2.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="img/3.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="img/4.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="img/5.jpg"/>
+							</a>
+						</li>
+					</ul>
+					<div id="picNav">
+						<span class="picActive"></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			
+				<!--可同步的选项卡-->
+				<section class="tab">
+					<header class="tabHeader">
+						<h2>MV首播</h2>
+						<a href="###">更多&gt</a>
+					</header>
+					<nav class="tabNav">
+						<a href="###">全部</a>
+						<a href="###">内地</a>
+						<a href="###">港台</a>
+						<a href="###">欧美</a>
+						<a href="###">韩国</a>
+						<a href="###">日本</a>
+						<span></span>
+					</nav>
+					<section class="tabList">
+						<ul class="tabNext"></ul>
+						<ul class="tabShow">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/a.jpg"/>
+									<span id="">君に贈る花がない</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>9167</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>6</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/b.jpg"/>
+									<span id="">幸亏 官方版</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>67</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/c.jpg"/>
+									<span id="">永世のクレイドル</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.8</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>16</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/d.jpg"/>
+									<span id="">Not Easy</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.2w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>10</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/e.jpg"/>
+									<span id="">New World 官方版 </span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>8.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>1667</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/f.jpg"/>
+									<span id="">旁边 电影《一句顶一万句》片尾曲</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>4987</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>3</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="tabNext"></ul>
+					</section>
+				</section>
+				<section class="tab">
+					<header class="tabHeader">
+						<h2>MV首播</h2>
+						<a href="###">更多&gt</a>
+					</header>
+					<nav class="tabNav">
+						<a href="###">全部</a>
+						<a href="###">内地</a>
+						<a href="###">港台</a>
+						<a href="###">欧美</a>
+						<a href="###">韩国</a>
+						<a href="###">日本</a>
+						<span></span>
+					</nav>
+					<section class="tabList">
+						<ul class="tabNext"></ul>
+						<ul class="tabShow">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/a.jpg"/>
+									<span id="">君に贈る花がない</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>9167</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>6</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/b.jpg"/>
+									<span id="">幸亏 官方版</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>67</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/c.jpg"/>
+									<span id="">永世のクレイドル</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.8</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>16</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/d.jpg"/>
+									<span id="">Not Easy</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.2w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>10</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/e.jpg"/>
+									<span id="">New World 官方版 </span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>8.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>1667</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/f.jpg"/>
+									<span id="">旁边 电影《一句顶一万句》片尾曲</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>4987</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>3</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="tabNext"></ul>
+					</section>
+				</section>
+				<section class="tab">
+					<header class="tabHeader">
+						<h2>MV首播</h2>
+						<a href="###">更多&gt</a>
+					</header>
+					<nav class="tabNav">
+						<a href="###">全部</a>
+						<a href="###">内地</a>
+						<a href="###">港台</a>
+						<a href="###">欧美</a>
+						<a href="###">韩国</a>
+						<a href="###">日本</a>
+						<span></span>
+					</nav>
+					<section class="tabList">
+						<ul class="tabNext"></ul>
+						<ul class="tabShow">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/a.jpg"/>
+									<span id="">君に贈る花がない</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>9167</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>6</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/b.jpg"/>
+									<span id="">幸亏 官方版</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>67</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/c.jpg"/>
+									<span id="">永世のクレイドル</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.8</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>16</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/d.jpg"/>
+									<span id="">Not Easy</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.2w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>10</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/e.jpg"/>
+									<span id="">New World 官方版 </span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>8.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>1667</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/f.jpg"/>
+									<span id="">旁边 电影《一句顶一万句》片尾曲</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>4987</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>3</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="tabNext"></ul>
+					</section>
+				</section>
+				<section class="tab">
+					<header class="tabHeader">
+						<h2>MV首播</h2>
+						<a href="###">更多&gt</a>
+					</header>
+					<nav class="tabNav">
+						<a href="###">全部</a>
+						<a href="###">内地</a>
+						<a href="###">港台</a>
+						<a href="###">欧美</a>
+						<a href="###">韩国</a>
+						<a href="###">日本</a>
+						<span></span>
+					</nav>
+					<section class="tabList">
+						<ul class="tabNext"></ul>
+						<ul class="tabShow">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/a.jpg"/>
+									<span id="">君に贈る花がない</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>9167</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>6</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/b.jpg"/>
+									<span id="">幸亏 官方版</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>67</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/c.jpg"/>
+									<span id="">永世のクレイドル</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.8</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>16</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/d.jpg"/>
+									<span id="">Not Easy</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.2w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>10</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/e.jpg"/>
+									<span id="">New World 官方版 </span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>8.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>1667</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/f.jpg"/>
+									<span id="">旁边 电影《一句顶一万句》片尾曲</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>4987</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>3</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="tabNext"></ul>
+					</section>
+				</section>
+				<section class="tab">
+					<header class="tabHeader">
+						<h2>MV首播</h2>
+						<a href="###">更多&gt</a>
+					</header>
+					<nav class="tabNav">
+						<a href="###">全部</a>
+						<a href="###">内地</a>
+						<a href="###">港台</a>
+						<a href="###">欧美</a>
+						<a href="###">韩国</a>
+						<a href="###">日本</a>
+						<span></span>
+					</nav>
+					<section class="tabList">
+						<ul class="tabNext"></ul>
+						<ul class="tabShow">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/a.jpg"/>
+									<span id="">君に贈る花がない</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>9167</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>6</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/b.jpg"/>
+									<span id="">幸亏 官方版</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>67</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/c.jpg"/>
+									<span id="">永世のクレイドル</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.8</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>16</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/d.jpg"/>
+									<span id="">Not Easy</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.2w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>10</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/e.jpg"/>
+									<span id="">New World 官方版 </span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>8.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>1667</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/f.jpg"/>
+									<span id="">旁边 电影《一句顶一万句》片尾曲</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>4987</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>3</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="tabNext"></ul>
+					</section>
+				</section>
+				<section class="tab">
+					<header class="tabHeader">
+						<h2>MV首播</h2>
+						<a href="###">更多&gt</a>
+					</header>
+					<nav class="tabNav">
+						<a href="###">全部</a>
+						<a href="###">内地</a>
+						<a href="###">港台</a>
+						<a href="###">欧美</a>
+						<a href="###">韩国</a>
+						<a href="###">日本</a>
+						<span></span>
+					</nav>
+					<section class="tabList">
+						<ul class="tabNext"></ul>
+						<ul class="tabShow">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/a.jpg"/>
+									<span id="">君に贈る花がない</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>9167</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>6</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/b.jpg"/>
+									<span id="">幸亏 官方版</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>67</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/c.jpg"/>
+									<span id="">永世のクレイドル</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.8</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>16</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/d.jpg"/>
+									<span id="">Not Easy</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>1.2w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>10</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/e.jpg"/>
+									<span id="">New World 官方版 </span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>8.5w</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>1667</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/f.jpg"/>
+									<span id="">旁边 电影《一句顶一万句》片尾曲</span>
+									<div class="ice">
+										<div class="ice_l">
+											<span class="ice_pic"></span>
+											<span>4987</span>
+										</div>
+										<div class="ice_r">
+											<span class="ice_pic"></span>
+											<span>3</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="tabNext"></ul>
+					</section>
+				</section>
+
+			</section>
+		</section>
+		<div id="scrollBar"></div>
+	</body>
+	<script src="js/transform.js"></script>
+	<script>
+	
+		window.onload=function(){
+			getFocus();
+			CMFCMenuBar();
+			dragNav();
+			carouselFigure();
+			tab();
+			definedBySelf();
+			others();
+		}
+	
+		//取消移动端的各种默认行为
+		document.addEventListener("touchstart",function(ev){
+			ev.preventDefault();
+		})
+	
+		//各种小操作
+		function others(){
+			//应用跳转方案
+			var aNodes = document.querySelectorAll("a");
+			for(var i=0;i<aNodes.length;i++){
+				aNodes[i].addEventListener("touchmove",function(){
+					if(!this.flag){
+						this.flag = true;
+					}
+				});
+				
+				aNodes[i].addEventListener("touchend",function(){
+					if(!this.flag){
+						window.location.href=this.href;
+					}
+					this.flag = false;
+				})
+			}
+			
+			//处理拖拽导航的点击变色
+			var list =document.querySelector("#navs");
+			var lis =document.querySelectorAll("#navs li");
+			list.addEventListener("touchmove",function(){
+					if(!this.flag){
+						this.flag = true;
+					}
+				});
+			
+			list.addEventListener("touchend",function(ev){
+				
+				if(!this.flag){
+					for(var i=0;i<lis.length;i++){
+					lis[i].className="";
+					}
+					
+					if(ev.target.nodeName.toUpperCase() == "A"){
+						ev.target.parentNode.className="active";
+					}else if(ev.target.nodeName.toUpperCase() == "LI"){
+						ev.target.className="active";
+					}
+				}
+				this.flag = false;
+				
+			})
+			
+		}
+	
+	
+		//自定义竖向滑屏&滚动条
+		function definedBySelf(){
+			var wrap = document.querySelector(".wrap");
+			var content = document.querySelector("#content");
+			var bar =document.querySelector("#scrollBar");
+			var search = document.querySelector("#search");
+			
+			var scale = wrap.clientHeight / content.offsetHeight;
+			var height = document.documentElement.clientHeight*scale;
+			bar.style.height=height+"px";
+			
+			
+			
+			//搜索按钮
+			var searchBtn = document.querySelector(".searchBtn");
+			var search = document.querySelector("#search");
+			
+			searchBtn.addEventListener("touchend",function(ev){
+				var over = -css(content,"translateY")*scale;
+				if(search.style.display=="block"){
+					if(over>10){
+						search.style.display="none";
+					}
+				}else{
+					search.style.display="block";
+				}
+				ev.stopPropagation();
+			})
+			
+			
+			var callBack ={};
+			callBack.start=function(){
+				bar.style.opacity=1;
+			}
+			callBack.moving=function(){
+				var over = -css(content,"translateY")*scale;
+				css(bar,"translateY",over);
+				
+				if(over>10){
+					search.style.display="none";
+				}else{
+					search.style.display="block";
+				}
+				
+			}
+			callBack.over=function(){
+				bar.style.opacity=0;
+			}
+			
+			
+			drag(wrap,1,callBack);
+		}
+		
+		//文本框获取焦点
+		function getFocus(){
+			var textNode = document.querySelector("#search input");
+			textNode.addEventListener("touchstart",function(ev){
+				this.focus();
+				ev.stopPropagation();
+			});
+			document.addEventListener("touchstart",function(){
+				textNode.blur();
+			})
+		}
+		
+		//菜单切换
+		function CMFCMenuBar(){
+			var menuBtn = document.querySelector("#menuBtn");
+			var listEl = document.querySelector("#list");
+			
+			menuBtn.addEventListener("touchstart",function(ev){
+				if(this.className=="menuBtnClos"){
+					this.className="menuBtnShow";
+					listEl.style.display="block";
+				}else if(this.className=="menuBtnShow"){
+					this.className="menuBtnClos";
+					listEl.style.display="none";
+				}
+				ev.stopPropagation();
+			})
+			
+			listEl.addEventListener("touchstart",function(ev){
+				ev.stopPropagation();
+			})
+			
+			document.addEventListener("touchstart",function(){
+				if(menuBtn.className=="menuBtnShow"){
+					menuBtn.className="menuBtnClos";
+					listEl.style.display="none";
+				}
+			})
+		}
+	
+		//可拖拽的导航
+		function dragNav(){
+			var navScroll = document.querySelector("#navScroll");
+			var navsNode = document.querySelector("#navs");
+			css(navsNode,"translateZ",0.001);//3d加速 开启我们的GPU进程
+			
+			var step = 0;
+			var stratX =0;
+			var elementX = 0;
+			var min = navScroll.clientWidth - navsNode.offsetWidth;
+			
+			var lastTime =0;
+			var lastPoint = 0;
+			var timeValue = 1;//时间差值,避免初始点击speed值为undefined
+			var disValue = 0;//距离的差值
+			
+			
+			navScroll.addEventListener("touchstart",function(ev){
+				navsNode.style.transition ="none";
+				
+				var touch = ev.changedTouches[0];
+				stratX = touch.clientX;
+				elementX = css(navsNode,"translateX");
+				
+				lastTime=new Date().getTime();//毫秒数
+				lastPoint = stratX;
+			})
+			
+			navScroll.addEventListener("touchmove",function(ev){
+				var touch = ev.changedTouches[0]; 
+				var nowX = touch.clientX;
+				var dis = nowX -stratX;
+				var translateX = elementX+dis;
+				
+				if(translateX>0){
+					step =0.6- translateX / (document.documentElement.clientWidth*3);
+					translateX=step*translateX;
+				}
+				if(translateX<min){
+					var overDis = min - translateX;
+					step =0.6 - overDis / (document.documentElement.clientWidth*3);
+					translateX =min - overDis*step;
+				}
+				
+				
+				var nowTime = new Date().getTime();
+				var nowPoint = nowX;
+				timeValue = nowTime - lastTime;
+				disValue = nowPoint - lastPoint;
+				lastTime = nowTime;
+				lastPoint = nowPoint;
+				
+				css(navsNode,"translateX",translateX);
+			})
+			
+			navScroll.addEventListener("touchend",function(){
+				var speed = disValue/timeValue;
+//				if(Math.abs(speed)<0.5){
+//					return;
+//				}
+				var left = speed*300;
+				var translateX = css(navsNode,"translateX");
+				var target = translateX + left;
+				var bessel = "";
+				var time =0;
+				time=Math.abs(speed)*0.4;
+				time=time<0.3?0.3:time;
+				
+				if(target>0){
+					target = 0;
+					bessel ="cubic-bezier(.08,1.44,.6,1.46)";
+				}
+				if(target<min){
+					target = min;
+					bessel ="cubic-bezier(.08,1.44,.6,1.46)";
+				}
+				
+				
+				navsNode.style.transition =time+"s "+bessel;
+				css(navsNode,"translateX",target);
+			})
+			
+			
+		}
+	
+		//无缝滑屏
+		function carouselFigure(){
+			var cssEl = document.createElement("style");
+			document.head.appendChild(cssEl);
+			
+			var wrapEl = document.querySelector("#picWrap");
+			var listEl = document.querySelector("#picList");
+			css(listEl,"translateZ",0.001);//3d加速 开启我们的GPU进程
+			listEl.innerHTML += listEl.innerHTML;
+			var liEls = document.querySelectorAll("#picList li");
+			var navEls = document.querySelectorAll("#picNav span");
+			
+			var cssText="#picList{width:"+liEls.length+"00%}";
+			cssText +="#picList li{width:"+(1/liEls.length)*100+"%}"
+			cssText +="#picWrap{height:"+liEls[0].offsetHeight+"px}";
+			cssEl.innerHTML += cssText;
+			
+			//开始滑屏(存值,存址)
+			var startPoint={};
+			var elementPoint={};
+//			var startX = 0;
+//			var elementX = 0;
+//			var startY = 0;
+//			var elementY = 0;
+			//清除定时器
+			var claer = 0;
+			//用来抽象图片的下标(即位置)
+			var now = 0;
+			
+			var isX =true;
+			var isFirst=true;
+			
+			wrapEl.addEventListener("touchstart",function(ev){
+				clearInterval(claer);
+				
+				now = Math.round(-css(listEl,"translateX")/wrapEl.clientWidth);
+				if(now==0){
+					now = navEls.length;
+				}
+				if(now==liEls.length-1){
+					now = navEls.length-1;
+				}
+				css(listEl,"translateX",-now*wrapEl.clientWidth);
+				
+				
+				listEl.style.transition = "none";
+				//快照
+				startPoint = {clientX:ev.changedTouches[0].clientX,clientY:ev.changedTouches[0].clientY};
+				
+//				startX = touch.clientX;
+//				startY = touch.clientY;
+				elementPoint.elementX=css(listEl,"translateX");
+				elementPoint.elementY=css(listEl,"translateY");
+				
+				isX=true;
+				isFirst=true;
+			})
+			
+			wrapEl.addEventListener("touchmove",function(ev){
+				if(!isX){
+					return;
+				}
+				
+//				var touch = ev.changedTouches[0];
+				var disX = ev.changedTouches[0].clientX - startPoint.clientX;
+				var disY = ev.changedTouches[0].clientY - startPoint.clientY;
+//				var nowX = touch.clientX;
+//				var nowY = touch.clientY;
+//				var disX = nowX-startX;
+//				var disY = nowY-startY;
+				
+				
+				if(isFirst){
+					isFirst=false;
+					if(Math.abs(disY)>Math.abs(disX)){
+						isX=false;
+						return;
+					}
+				}
+				
+				
+				css(listEl,"translateX",elementPoint.elementX+disX);
+			})
+			
+			wrapEl.addEventListener("touchend",function(){
+				
+				now = Math.round(-css(listEl,"translateX")/wrapEl.clientWidth);
+				if(now<0){
+					now=0;
+				}else if(now>liEls.length-1){
+					now=liEls.length-1;
+				}
+				
+				autoMove();
+				auto();
+			})
+			
+			
+			//自动轮播
+//			var autoFlag = 0;
+			auto();
+			function auto(){//定时器的开关
+				claer=setInterval(function(){
+					
+					if(now==liEls.length-1){
+						listEl.style.transition = "none";
+						now = navEls.length-1;
+						css(listEl,"translateX",-now*wrapEl.clientWidth);
+					}
+					
+					setTimeout(function(){
+						now++;
+						autoMove();
+					},20)
+					
+				},1000);
+			}
+		
+			function autoMove(){
+				listEl.style.transition = "1s";
+				css(listEl,"translateX",-now*wrapEl.clientWidth);
+				
+				for(var i=0;i<navEls.length;i++){
+					navEls[i].className="";
+				}
+				navEls[now%navEls.length].className="picActive";
+			}
+		}
+	
+		//可同步的选项卡
+		function tab(){
+			var tabLists = document.querySelectorAll(".tabList");
+			var tabNavs = document.querySelectorAll(".tabNav");
+//			var tabNexts = document.querySelectorAll(".tabNext");
+//			var aEls = document.querySelectorAll(".tabNav a");
+//			var smallGreen = document.querySelector(".tabNav span");
+			
+			
+			var transLateX = tabNavs[0].offsetWidth;
+			for(var i=0;i<tabLists.length;i++){
+				slide(tabLists[i],tabNavs[i]);
+			}
+			
+			function slide(list,nav){
+				//矫正位置
+				css(list,"translateX",-transLateX);
+				css(list,"translateZ",0.001);
+				
+				var tabNexts = list.getElementsByClassName("tabNext");
+				var aEls = nav.getElementsByTagName("a");
+				var smallGreen = nav.getElementsByTagName("span")[0];
+				css(smallGreen,"translateZ",0.001);
+				
+				
+				//滑屏
+				var startX = 0;
+				var elementX = 0;
+				var startY = 0;
+				var elementY = 0;
+				var isX =true;
+				var isFirst=true;
+				var isloading =false;
+				var now=0;
+				
+				list.addEventListener("touchstart",function(ev){
+					if(isloading){
+						return;
+					}
+					list.style.transition="none";
+					
+					var touch = ev.changedTouches[0];
+					startX = touch.clientX;
+					startY = touch.clientY;
+					elementX=css(list,"translateX");
+					elementY=css(list,"translateY");
+					
+					isX=true;
+					isFirst=true;
+				})
+				
+				list.addEventListener("touchmove",function(ev){
+					if(isloading){
+						return;
+					}
+					if(!isX){
+						return;
+					}
+					
+					var touch = ev.changedTouches[0];
+					var nowX = touch.clientX;
+					var nowY = touch.clientY;
+					var disX = nowX-startX;
+					var disY = nowY-startY;
+					
+					
+					if(isFirst){
+						isFirst=false;
+						if(Math.abs(disY)>Math.abs(disX)){
+							isX=false;
+							return;
+						}
+					}
+					
+					css(list,"translateX",elementX+disX);
+					
+					if(Math.abs(disX)>transLateX/2){
+						end(disX);
+					}
+				})
+				
+				list.addEventListener("touchend",function(ev){
+					if(isloading){
+						return;
+					}
+					var touch = ev.changedTouches[0];
+					var nowX = touch.clientX;
+					var disX = nowX-startX;
+					if(Math.abs(disX)<transLateX/2){
+						list.style.transition="300ms ";
+						css(list,"translateX",-transLateX);
+					}
+				})
+				
+				function end(disX){
+					isloading=true;
+					/*1:向左滑  -1:向右滑*/
+					var dir = Math.abs(disX)/disX;
+					var traget=dir>0?0:-2*transLateX;
+					
+					now -= dir;
+					if(now<0){
+						now =aEls.length-1 ;
+					}
+					if(now>aEls.length-1){
+						now =0 ;
+					}
+					
+					console.log(now);
+					
+					list.style.transition="300ms ";
+					css(list,"translateX",traget);
+					list.addEventListener("transitionend",transitionend);
+					list.addEventListener("webkitTransitionEnd",transitionend);
+				}
+				
+				function transitionend(){
+					
+					var left=aEls[now].offsetLeft;
+					smallGreen.style.transition ="0.5s";
+					css(smallGreen,"translateX",left);
+					
+					list.removeEventListener("transitionend",transitionend);
+					list.removeEventListener("webkitTransitionEnd",transitionend);
+					for(var i=0;i<tabNexts.length;i++){
+						tabNexts[i].style.opacity=1;
+					}
+					
+					//发送一个ajax
+					setTimeout(function(){
+						list.style.transition="none";
+						css(list,"translateX",-transLateX);
+						isloading=false;
+						for(var i=0;i<tabNexts.length;i++){
+							tabNexts[i].style.opacity=0;
+						}
+					},1000);
+				}
+			}
+		}
+	
+	</script>
+</html>
